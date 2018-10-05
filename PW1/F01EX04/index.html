@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex04</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>Produto</h1>
+        <h2>Nome: {{productName}} kgs</h2>
+        <h2 v-html = "productDesc"></h2>
+        <h2 v-if = "productPrice < 1000">Preço: {{productPrice}}€</h2>
+        <button v-on:click = "restorePrice">Clica-me</button>
+        <button v-on:click = "restorePrice">Clica-me</button>
+        <img v-bind:src="productImage" alt="">
+
+    <script src="../js/vue.js"></script>
+    <script src="view-instance.js"></script>
+</body>
+</html>
