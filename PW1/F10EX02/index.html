@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F10EX02</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <span>FILTER</span>
+        <p>
+            Stadium:
+            <select id="sltStadium">
+                <option v-for = "stadium in listStadiums" :value="stadium">
+                    {{stadium}}
+                </option>
+            </select>
+        </p>
+        <p>
+            Team:
+            <select id="sltTeams">
+                <option v-for = "team in listTeams" :value="team">
+                    {{team}}
+                </option>
+            </select>
+        </p>
+        <div class="row">            
+                <game-soccer-card v-for="game in games" v-bind:game="game">
+                </game-soccer-card>                    
+        </div>
+        
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>    
+    <script src="index.js"></script>
+
+</body>
+
+</html>
